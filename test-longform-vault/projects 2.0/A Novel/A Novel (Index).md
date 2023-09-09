@@ -9,6 +9,7 @@ longform:
     - RenameUser
     - ActivateUser
     - DeactivateUser
+    - SendToCRM
   ignoredFiles:
     - "*-scratch"
     - manuscript

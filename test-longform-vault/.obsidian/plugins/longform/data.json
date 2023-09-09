@@ -1,0 +1,199 @@
+{
+  "version": 3,
+  "projects": {},
+  "selectedDraftVaultPath": "projects 2.0/A Novel/A Novel (Index).md",
+  "userScriptFolder": null,
+  "sessionStorage": "data",
+  "sessions": [
+    {
+      "start": "2023-09-09T12:27:45.618Z",
+      "total": 81,
+      "drafts": {
+        "simple-project/simple-project.md": {
+          "total": 0,
+          "scenes": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "fourth": 0,
+            "third scene unlisted": 0,
+            "second scene": 0,
+            "first scene": 0,
+            "fifth": 0
+          }
+        },
+        "projects 2.0/test4/Index.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "projects 2.0/test new draft/Index.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "projects 2.0/An Essay.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "projects 2.0/A Short Story.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "projects 2.0/A Novel Draft 2/A Novel Draft 2 (Index).md": {
+          "total": 0,
+          "scenes": {
+            "in this draft": 0,
+            "test": 0,
+            "test3": 0,
+            "test4": 0
+          }
+        },
+        "projects 2.0/A Novel/A Novel (Index).md": {
+          "total": 81,
+          "scenes": {
+            "AddUser": 3,
+            "RenameUser": 1,
+            "ActivateUser": 1,
+            "DeactivateUser": 1,
+            "SendToCRM": 75
+          }
+        }
+      }
+    },
+    {
+      "start": "2023-09-08T19:29:49.054Z",
+      "total": 0,
+      "drafts": {
+        "simple-project/simple-project.md": {
+          "total": 0,
+          "slices": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "fourth": 0,
+            "third slice unlisted": 0,
+            "second slice": 0,
+            "first slice": 0,
+            "fifth": 0
+          }
+        },
+        "projects 2.0/test4/Index.md": {
+          "total": 0,
+          "slices": {}
+        },
+        "projects 2.0/test new draft/Index.md": {
+          "total": 0,
+          "slices": {}
+        },
+        "projects 2.0/An Essay.md": {
+          "total": 0,
+          "slices": {}
+        },
+        "projects 2.0/A Short Story.md": {
+          "total": 0,
+          "slices": {}
+        },
+        "projects 2.0/A Novel Draft 2/A Novel Draft 2 (Index).md": {
+          "total": 0,
+          "slices": {
+            "in this draft": 0,
+            "test": 0,
+            "test3": 0,
+            "test4": 0
+          }
+        },
+        "projects 2.0/A Novel/A Novel (Index).md": {
+          "total": 292,
+          "slices": {
+            "AddUser": 82,
+            "RenameUser": 75,
+            "ActivateUser": 60,
+            "DeactivateUser": 75
+          }
+        }
+      }
+    }
+  ],
+  "showWordCountInStatusBar": true,
+  "startNewSessionEachDay": true,
+  "sessionGoal": 500,
+  "applyGoalTo": "all",
+  "notifyOnGoal": true,
+  "countDeletionsForGoal": false,
+  "keepSessionCount": 30,
+  "sessionFile": "longform-sessions.json",
+  "numberScenes": true,
+  "sceneTemplate": null,
+  "workflows": {
+    "Default Workflow": {
+      "name": "Default Workflow",
+      "description": "A starter workflow. Feel free to edit, rename, or delete it and create your own.",
+      "steps": [
+        {
+          "id": "remove-links",
+          "optionValues": {
+            "remove-wikilinks": true,
+            "remove-external-links": true
+          }
+        },
+        {
+          "id": "strip-frontmatter",
+          "optionValues": {}
+        },
+        {
+          "id": "prepend-title",
+          "optionValues": {
+            "format": "# $1",
+            "separator": "\n\n"
+          }
+        },
+        {
+          "id": "concatenate-text",
+          "optionValues": {
+            "separator": "\\n\\n---\\n\\n"
+          }
+        },
+        {
+          "id": "write-to-note",
+          "optionValues": {
+            "target": "manuscript.md",
+            "open-after": true
+          }
+        }
+      ]
+    }
+  }
+}

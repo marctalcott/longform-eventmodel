@@ -1,9 +1,11 @@
+
 ## meta:
 agg: [[User]]
 proj: [[ThatProject]]
 story: https://google.com
 dev: [[Joe]]
 status: [[status/dev]]
+
 
 ```cm
 n: adduser
@@ -14,6 +16,7 @@ f:
 
 ```
 
+## AddedUser
 ```ev
 n: addeduser
 f:
@@ -21,6 +24,8 @@ f:
 - fname
 - lname
 ```
+
+
 
 ```vw
 id: userView
