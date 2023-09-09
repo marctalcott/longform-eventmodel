@@ -1,7 +1,7 @@
 ---
 longform:
   format: scenes
-  title: A Novel; or, What Projects Look Like Now
+  title: My Test Event Model
   workflow: Default Workflow
   sceneFolder: scenes-hello
   scenes:

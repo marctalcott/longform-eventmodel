@@ -5,11 +5,12 @@ longform:
   sceneFolder: /
   scenes:
     - "5"
+    - "3"
     - "1"
+    - "2"
     - "4"
     - "20"
-    - "2"
-    - "3"
+    - - - "8"
     - "19"
     - fourth
     - third scene unlisted
@@ -17,7 +18,6 @@ longform:
     - second scene
     - "12"
     - first scene
-    - "8"
     - fifth
     - "6"
     - "7"
@@ -29,6 +29,7 @@ longform:
     - "17"
     - "16"
     - "18"
+  sceneTemplate: simple-project/10.md
   ignoredFiles:
     - manuscript
 some-test: hello

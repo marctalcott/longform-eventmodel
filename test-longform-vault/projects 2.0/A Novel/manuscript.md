@@ -1,11 +1,201 @@
-# first scene
+# AddUser
+
+## meta:
+agg: User
+proj: ThatProject
+story: https://google.com
+dev: Joe
+status: status/dev
+
+```cm
+n: adduser
+f:
+- id
+- fname
+- lname
+
+```
+
+```ev
+n: addeduser
+f:
+- id
+- fname
+- lname
+```
+
+```vw
+id: userView
+f: 
+- id
+- fname
+- lname
+```
+
+```gwt
+g: 
+w:
+t:
+```
+
+```story
+As a AppUser, I want to add a User to the system, so I can manage their account info.
 
 
 
-a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a asda asdsa dasdas dsad asd asdas dasd asd asd asdas das dasd as ads ad ad asdas das das das asasd asd a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a a a a a a a a a a a a aa a a a a a a a aa a a a a a a a aa a a a a a aa a a aa a a aa a asdasd asdas dasdas dasd adasd 
+```
 
 ---
 
-# fourth
+# RenameUser
 
-hello! asdsadsad
+
+## meta:
+agg: User
+proj: ThatProject
+story: https://google.com
+dev: Joe
+status: status/dev
+
+
+```api
+v: put
+u: /user/{id}/name
+f:
+- fname
+- lname
+```
+
+```cm
+n: renameUser
+f:
+- id
+- fname
+- lname
+
+```
+
+```ev
+n: renamedUser
+f:
+- id
+- fname
+- lname
+```
+
+```vw
+id: userView
+f: 
+- id
+- fname
+- lname
+```
+
+```gwt
+g: user is authorized
+w: user calls api endpoint
+t: renamedUser event is saved
+a: userView is updated
+```
+
+
+
+
+---
+
+# ActivateUser
+
+
+## meta:
+agg: User
+proj: ThatProject
+story: https://google.com
+dev: 
+status: grooming
+
+
+```api
+v: patch
+u: /user/{id}/activate
+f:
+
+```
+
+```cm
+n: activateUser
+f:
+- id
+
+```
+
+```ev
+n: activatedUser
+f:
+- id
+```
+
+```vw
+id: userView
+f: 
+- id
+- active = true
+```
+
+```gwt
+g: user is authorized
+w: user calls api endpoint
+t: activatedUser event is saved
+a: userView is updated
+```
+
+
+
+
+---
+
+# DeactivateUser
+
+
+## meta:
+agg: User
+proj: ThatProject
+story: https://google.com
+dev: 
+status: grooming
+
+
+```api
+v: patch
+u: /user/{id}/deactivate
+f:
+
+```
+
+```cm
+n: deactivateUser
+f:
+- id
+
+```
+
+```ev
+n: deactivatedUser
+f:
+- id
+```
+
+```vw
+id: userView
+f: 
+- id
+- active = false
+```
+
+```gwt
+g: user is authorized
+w: user calls api endpoint
+t: deactivatedUser event is saved
+a: userView is updated
+```
+
+

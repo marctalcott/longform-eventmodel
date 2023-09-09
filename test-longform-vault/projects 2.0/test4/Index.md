@@ -1,7 +1,7 @@
 ---
 longform:
   format: scenes
-  title: A Novel; or, What Projects Look Like Now
+  title: My Test Event Model
   draftTitle: test4
   workflow: test
   sceneFolder: /
