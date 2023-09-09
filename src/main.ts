@@ -13,7 +13,7 @@ import pick from "lodash/pick";
 import { derived, type Unsubscriber } from "svelte/store";
 import { get } from "svelte/store";
 import {
-  VIEW_TYPE_LONGFORM_EXPLORER,
+  VIEW_TYPE_EVENTMODELER_EXPLORER,
   ExplorerPane,
 } from "./view/explorer/ExplorerPane";
 import {
@@ -77,7 +77,7 @@ export default class LongformPlugin extends Plugin {
     addIcon(ICON_NAME, ICON_SVG);
 
     this.registerView(
-      VIEW_TYPE_LONGFORM_EXPLORER,
+      VIEW_TYPE_EVENTMODELER_EXPLORER,
       (leaf: WorkspaceLeaf) => new ExplorerPane(leaf)
     );
 
@@ -178,7 +178,7 @@ export default class LongformPlugin extends Plugin {
     this.unsubscribeGoalNotification();
     this.writingSessionTracker.destroy();
     this.app.workspace
-      .getLeavesOfType(VIEW_TYPE_LONGFORM_EXPLORER)
+      .getLeavesOfType(VIEW_TYPE_EVENTMODELER_EXPLORER)
       .forEach((leaf) => leaf.detach());
   }
 
@@ -229,7 +229,7 @@ export default class LongformPlugin extends Plugin {
         selectedDraftVaultPath.set(draft.vaultPath);
         this.initLeaf();
         const leaf = this.app.workspace
-          .getLeavesOfType(VIEW_TYPE_LONGFORM_EXPLORER)
+          .getLeavesOfType(VIEW_TYPE_EVENTMODELER_EXPLORER)
           .first();
         if (leaf) {
           this.app.workspace.revealLeaf(leaf);
@@ -384,12 +384,12 @@ export default class LongformPlugin extends Plugin {
 
   initLeaf(): void {
     if (
-      this.app.workspace.getLeavesOfType(VIEW_TYPE_LONGFORM_EXPLORER).length
+      this.app.workspace.getLeavesOfType(VIEW_TYPE_EVENTMODELER_EXPLORER).length
     ) {
       return;
     }
     this.app.workspace.getLeftLeaf(false).setViewState({
-      type: VIEW_TYPE_LONGFORM_EXPLORER,
+      type: VIEW_TYPE_EVENTMODELER_EXPLORER,
     });
   }
 

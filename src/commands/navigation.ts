@@ -17,7 +17,7 @@ import {
   scenePathForLocation,
   type SceneNavigationLocation,
 } from "src/model/scene-navigation";
-import { VIEW_TYPE_LONGFORM_EXPLORER } from "src/view/explorer/ExplorerPane";
+import { VIEW_TYPE_EVENTMODELER_EXPLORER } from "src/view/explorer/ExplorerPane";
 import type LongformPlugin from "src/main";
 import type { Draft } from "src/model/types";
 import { draftTitle } from "src/model/draft-utils";
@@ -125,7 +125,7 @@ export const focusCurrentDraft: CommandBuilder = () => ({
 const showLeaf = (plugin: LongformPlugin) => {
   plugin.initLeaf();
   const leaf = plugin.app.workspace
-    .getLeavesOfType(VIEW_TYPE_LONGFORM_EXPLORER)
+    .getLeavesOfType(VIEW_TYPE_EVENTMODELER_EXPLORER)
     .first();
   if (leaf) {
     plugin.app.workspace.revealLeaf(leaf);

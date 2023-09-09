@@ -21,7 +21,7 @@ import { insertScene } from "src/model/draft-utils";
 import NewDraftModal from "src/view/project-lifecycle/new-draft-modal";
 import { UndoManager } from "../undo/undo-manager";
 
-export const VIEW_TYPE_LONGFORM_EXPLORER = "VIEW_TYPE_LONGFORM_EXPLORER";
+export const VIEW_TYPE_EVENTMODELER_EXPLORER = "VIEW_TYPE_EVENTMODELER_EXPLORER";
 
 export class ExplorerPane extends ItemView {
   private explorerView: ExplorerView;
@@ -32,11 +32,11 @@ export class ExplorerPane extends ItemView {
   }
 
   getViewType(): string {
-    return VIEW_TYPE_LONGFORM_EXPLORER;
+    return VIEW_TYPE_EVENTMODELER_EXPLORER;
   }
 
   getDisplayText(): string {
-    return "Longform";
+    return "Event Modeler";
   }
 
   getIcon(): string {
@@ -103,7 +103,7 @@ export class ExplorerPane extends ItemView {
 
     // Create a fully-qualified path to a scene from its name.
     context.set(
-      "makeScenePath",
+      "makeSlicePath",
       (draft: MultipleSceneDraft, sceneName: string) =>
         scenePath(sceneName, draft, this.app.vault)
     );

@@ -26,8 +26,8 @@
   }
 
   // Function to make paths from scene names
-  const makeScenePath: (draft: MultipleSceneDraft, scene: string) => string =
-    getContext("makeScenePath");
+  const makeSlicePath: (draft: MultipleSceneDraft, scene: string) => string =
+    getContext("makeSlicePath");
 
   // Map current list of scenes to data for our sortable list
   type SceneItem = {
@@ -77,7 +77,7 @@
         id: title,
         name: title,
         indent: indent,
-        path: makeScenePath($selectedDraft as MultipleSceneDraft, title),
+        path: makeSlicePath($selectedDraft as MultipleSceneDraft, title),
         collapsible: nextScene && nextScene.indent > indent,
         hidden,
         numbering,
